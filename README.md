@@ -1,3 +1,17 @@
+# Hexo blank-boilerplate
+
+This theme demostrates how to bootstrap a new Hexo theme.
+
+It is based on the Hexo Theme Unit Test and shows the bare minimum needed
+to start building a new theme.
+
+
+----
+----
+----
+----
+
+
 # Hexo Theme Unit Test
 
 This is a dummy Hexo site for theme unit test. You should test your theme before release.
@@ -20,7 +34,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 
 ### `<head>`
 
-- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).  
+- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).
   If you don't know which doctype you should use, `<!DOCTYPE html>` is recommended.
 - UTF8 charset
 
@@ -56,7 +70,7 @@ This test doesn't contain the default theme. You have to install the theme you w
 
 ### Performance
 
-- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)  
+- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)
   It caches render result across post/pages, see [#1769](https://github.com/hexojs/hexo/issues/1769) for the impact
 
 ### Optional

@@ -38,17 +38,11 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   auto_detect: true
   hljs: true
   line_number: false
   tab_replace:
-
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'a11y-dark' # a11y-dark atom-dark base16-ateliersulphurpool.light cb darcula dracula duotone-dark duotone-earth duotone-forest duotone-light duotone-sea duotone-space ghcolors hopscotch material-dark material-light material-oceanic nord pojoaque shades-of-purple synthwave84 vs vsc-dark-plus xonokai
-  line_number: true    # default false
-#  custom_css: 'path/to/your/custom.css'     # optional
 
 # Category & Tag
 default_category: uncategorized
