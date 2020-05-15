@@ -1,0 +1,11 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+}
+
+body {
+  padding: 3rem 6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}

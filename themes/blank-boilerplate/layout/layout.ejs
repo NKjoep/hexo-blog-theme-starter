@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%- is_home() ? 'homepage' : page.title -%>
+    |
+    <%- config.title -%>
+  </title>
+
+  <link rel="stylesheet" href="<%- url_for('/blank-boilerplate.css') %>">
+
+</head>
+<body>
+  <header>
+    layout.ejs
+  </header>
+
+  <p>
+    Layout must include the <code>&lt;%- body -&gt;</code> somewhere.
+  </p>
+
+  <hr>
+
+  <%- body -%>
+
+
+  <details>
+    <summary>Debug Template Scaffolding</summary>
+    <table>
+      <tbody>
+        <tr><th>Template</th> <th>Page</th> <th>Fallback</th> </tr>
+        <tr><td>index.ejs</td> <td>Home</td> <td>page</td> </tr>
+        <tr><td>post.ejs</td> <td>Posts</td> <td>index</td> </tr>
+        <tr><td>page.ejs</td> <td>Pages</td> <td>index</td> </tr>
+        <tr><td>archive.ejs</td> <td>Archives</td> <td>index</td> </tr>
+        <tr><td>category.ejs</td> <td>Category archives</td> <td>archive</td> </tr>
+        <tr><td>tag.ejs</td> <td>Tag archives</td> <td>archive</td> </tr>
+        <tr><td>layout.ejs</td> <td>contains all</td> </tr>
+      </tbody>
+    </table>
+  </details>
+  <details>
+    <summary>Debug Template Variables</summary>
+    <table style="border: 0 none; padding: 0;">
+      <tr>
+        <%-
+        [
+          'is_home()',
+          'is_current()',
+          'is_home()',
+          'is_post()',
+          'is_page()',
+          'is_archive()',
+          'is_year()',
+          'is_month()',
+          'is_category()',
+          'is_tag()',
+          'Object.keys(page)',
+          '(page.posts||[]).length',
+          'theme',
+          'config',
+
+        ].map((v) =>
+          `
+            <td style="padding: 0 0 0.5rem 0.5rem;">${v}</td>
+            <td style="padding: 0 0 0.5rem 0.5rem;">
+              <pre style="
+                overflow: scroll;
+                width: 100%;
+                max-height: 20vh;
+                display: block;
+              ">${
+                JSON.stringify(eval(v), null, 1)
+              }</pre>
+            </td>
+          `
+        ).join('</tr><tr>')
+        %>
+      </tr>
+
+    </table>
+  </details>
+
+</body>
+</html>

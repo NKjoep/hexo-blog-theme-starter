@@ -1,0 +1,18 @@
+<h1>
+  post.ejs |
+  <%= page.title %>
+</h1>
+
+<p>
+Usually here goes <code>page.title</code> and <code>page.content</code>.
+</p>
+
+<p>
+  Here is the `page` context variable is available with these properties:
+</p>
+
+<p>
+  <%= Object.keys(page).sort().join(' | '); %>
+</p>
+
+<hr>
