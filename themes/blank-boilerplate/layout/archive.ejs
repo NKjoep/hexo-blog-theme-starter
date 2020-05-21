@@ -1,0 +1,34 @@
+<h1>archive.ejs</h1>
+
+<hr>
+
+<p>This template is used for the category and tag lists</p>
+
+<p>
+  is_archive(): <%- is_archive() %>
+</p>
+<p>
+  is_category(): <%- is_category() %>
+</p>
+<p>
+  is_tag(): <%- is_tag() %>
+</p>
+
+<hr>
+
+<% (page.posts || []).forEach((post, index) => { %>
+  <p>
+    index: <%= index %> &emsp;
+    title: <%= post.title %> &emsp;
+    link: <a href="<%= url_for(post.path) %>"><%= post.path %></a>
+  </p>
+<% }) %>
+
+<hr>
+
+Pagination:  <%- paginator({
+  prev_text: '[previous page]',
+  next_text: '[next page]',
+}) %>
+
+<hr>
